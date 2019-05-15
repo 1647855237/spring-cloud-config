@@ -1,0 +1,38 @@
+spring:
+ profiles:
+  active:
+   - dev
+   
+---
+server:
+ port: 8001
+ 
+spring:
+ profiles: dev
+ application:
+  name: spring_cloud_config_ticket_client
+  
+eureka:
+  client:
+   service-url:
+    defaultZone: http://eureka8761:8761/eureka/
+   instance:
+    instance-id: dept-8761.com
+    prefer-ip-address: true
+    
+---
+server:
+ port: 8001
+ 
+spring:
+ profiles: test
+ application:
+  name: spring_cloud_config_ticket_client
+  
+eureka:
+  client:
+   service-url:
+    defaultZone: http://eureka8761:8761/eureka/
+   instance:
+    instance-id: dept-8761.com
+    prefer-ip-address: true

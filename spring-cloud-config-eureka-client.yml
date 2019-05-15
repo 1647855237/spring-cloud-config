@@ -1,0 +1,43 @@
+spring:
+ profiles:
+  active: 
+    - dev
+---
+server:
+ port: 8761 #注册中心占用7001端口
+ 
+spring:
+ profiles: dev
+ application: 
+  name: spring_cloud_config_eureka_client
+  
+eureka:
+ instance:
+  hostname: eureka8761.com
+ client:
+  register-with-eureka: false
+  fetch-registry: false
+  service-url:
+   defaultZone: http://eureka8761.com:8761/eureka/
+---
+server:
+ port: 8761
+ 
+spring:
+ profiles: test
+ application: 
+  name: spring_cloud_config_eureka_client
+  
+eureka:
+ instance:
+  hostname: eureka8761.com
+ client:
+  register-with-eureka: false
+  fetch-registry: false
+  service-url:
+   defaultZone: http://eureka8761.com:8761/eureka/
+  
+ 
+ 
+ 
+ 
