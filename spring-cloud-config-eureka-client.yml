@@ -4,7 +4,8 @@ spring:
     - dev
 ---
 server:
- port: 8761 #注册中心占用7001端口
+ port: 8761
+#注册中心占用7001端口，注解不能写在代码后面
  
 spring:
  profiles: dev
@@ -19,6 +20,7 @@ eureka:
   fetch-registry: false
   service-url:
    defaultZone: http://eureka8761.com:8761/eureka/
+   
 ---
 server:
  port: 8761
