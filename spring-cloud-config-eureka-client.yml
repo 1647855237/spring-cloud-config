@@ -14,16 +14,23 @@ eureka:
   # enable-self-preservation: false #设置false表示关闭保护模式（理论上只有关闭保护模式之后，才能清理无效微服务操作）
   # eviction-interval-timer-in-ms: 1000 #1s清理一次（默认是60s清理，可不配置）
   instance:
-    hostname: eurekaserver-8761.com #定义Eureka实例所在的主机名称
+    hostname: eurek8761.com 
+    #定义Eureka实例所在的主机名称
+    instance-id: eureka-server 
+    #自定义服务名称
+    prefer-ip-address: true 
+    #访问地址可以显示IP
   client:
-    registerWithEureka: false #不注册信息
-    fetchRegistry: false #不获取信息
+    registerWithEureka: false 
+    #不注册信息
+    fetchRegistry: false 
+    #不获取信息
     serviceUrl:
-      defaultZone: http://eurekaserver-8761.com:8761/eureka
+      defaultZone: http://eurek8761.com:8761/eureka/
 spring:
   profiles: dev
   application:
-    name: eureka-server
+    name: eureka8761.com
  
 ---
  
@@ -33,17 +40,23 @@ server:
 
  
 eureka:
-  # 一下两项不建议配置，默认配置即可
   # enable-self-preservation: false #设置false表示关闭保护模式（理论上只有关闭保护模式之后，才能清理无效微服务操作）
   # eviction-interval-timer-in-ms: 1000 #1s清理一次（默认是60s清理，可不配置）
   instance:
-    hostname: eurekaserver-8762.com #定义Eureka实例所在的主机名称
+    hostname: eureka8762.com 
+    #定义Eureka实例所在的主机名称
+     instance-id: eureka-server 
+    #自定义服务名称
+    prefer-ip-address: true 
+    #访问地址可以显示IP
   client:
-    registerWithEureka: false #不注册信息
-    fetchRegistry: false #不获取信息
+    registerWithEureka: false 
+    #不注册信息
+    fetchRegistry: false 
+    #不获取信息
     serviceUrl:
-      defaultZone: http://admin:admin@eurekaserver-8762.com:8762/eureka
+      defaultZone: http://eurek8762.com:8762/eureka
 spring:
   profiles: test
   application:
-    name: eureka-server
+    name: eureka8762.com
