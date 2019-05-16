@@ -9,7 +9,7 @@ server:
 spring:
  profiles: dev
  application:
-  name；spring-cloud-cloud-8761
+  name: spring-cloud-cloud-8761
 eureka:
   instance:
     hostname: eureka8761.com 
@@ -27,7 +27,7 @@ server:
 spring:
  profiles: test
  application:
-  name；spring-cloud-cloud-8761
+  name: spring-cloud-cloud-8761
  
 eureka:
   instance:
